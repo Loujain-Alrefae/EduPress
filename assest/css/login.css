@@ -1,0 +1,409 @@
+:root{
+    --primary-color: #FF782D;
+    --black-color:#000000;
+    --dis-color:#555555;
+    --White_grey: #F5F5F5;
+    --Grey:#9D9D9D;
+    --exo-font: "Exo", sans-serif;
+    --jost-font: "Jost", sans-serif;
+    --dis-size:18px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* global style   */
+.container{
+    padding:56px  70px  70px ;
+}
+
+.dis-style{
+    font-family: var(--jost-font);
+    font-size: var(--dis-size);
+    color: var(--dis-color);
+    font-weight: 400;
+}
+
+.h2-style{
+    font-family: var(--exo-font);
+    font-weight: 600;
+    font-size: 32px;
+    color: var(--black-color);
+}
+
+.btn{
+    padding: 10px 24px;
+    border-radius: 24px;
+    font-size: var(--dis-size);
+    font-family: var(--jost-font);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.orange{
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+}
+
+/* header styling */
+header{
+
+    nav{
+        width: 100vw;
+        height: 72px;
+        padding: 0 70px;
+        background-color: white;
+        position:fixed ;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .book{
+            display: none;
+        }
+
+        ul{
+            min-width: 519px;
+            list-style: none;
+            font-family: var(--exo-font);
+            display: flex;
+            justify-content: space-between;
+                
+            li{
+                    
+                .link{
+                    color:var(--black-color);
+                    padding:26.5px 20px;
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+
+                a:focus{
+                    color: var(--primary-color);
+                    background-color: var(--White_grey);
+                }
+            }
+
+            .hidden{
+                display: none;
+            }
+
+            .dropdown{
+                position: relative;
+
+                img{
+                    position: absolute;
+                    left: 58px;
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: middle;
+                }
+
+                .submenu{
+                    min-width: 100%;
+                    width: 90px;
+                    display: none;
+                    position: absolute;
+                    top: 46px;
+                    left: 0;
+                    background-color: white;                 
+                    border-radius: 8px;
+                    border: 1px solid  var(--Light_grey);
+
+                    li{
+                        padding: 10px 0;
+                        a{
+                            text-decoration: none;
+                            color: var(--black-color);
+
+                        }
+                    }
+
+                    li:hover{
+                        a{
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+
+            .dropdown:hover{
+                .submenu{
+                    display: block;
+                }
+            }
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            a{
+                min-width: 130px;
+                font-weight: 500;
+                font-size: 18px;
+                font-family: var(--jost-font);
+                color: var(--black-color);
+                text-decoration: none;
+            }
+                
+        }
+
+        .bars{
+            display: none;
+        }
+    }   
+
+    .title{
+        margin-top: 72px;
+        padding: 18px 70px ;
+        display: flex;
+        gap: 8px;
+        background-color: var(--White_grey);
+        align-items: center;
+
+        a{
+            text-decoration: none;
+            font-family: var(--jost-font);
+            color: var(--dis-color);
+        }
+
+        .dif-color{
+            font-family: var(--jost-font);
+            color: var(--Grey);
+        }
+    }
+}
+
+/* main styling */
+
+/* Login / Register styling  */
+.forms{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    .login-form{
+        width: 609px;
+        height: 406px;
+        padding: 30px;
+        border: 1px solid  #EAEAEA;
+        border-radius:20px ;
+
+        .u-name , .u-pass{
+            input{
+                width: 100%;
+                padding: 10.5px 16px;
+                margin:30px 0 20px;
+                border-radius: 8px;
+                border: 1px solid var(--Grey);
+                outline: none;
+            }
+
+            .def-margin{
+                margin: 0 0 20px;
+            }
+        }
+
+        button{
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .dif-color{
+            text-decoration: none;
+            color: var(--black-color);
+        }
+    }
+
+    .Register-form{
+        width: 585px;
+        border: 1px solid  #EAEAEA;
+        border-radius:20px ;
+        padding: 30px;
+
+        h2{
+            padding-bottom: 10px;
+        }
+        
+        input{
+            width: 100%;
+            padding: 10.5px 16px;
+            margin-top: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--Grey);
+            outline: none;
+        }
+
+        button{
+            width: 100%;
+            margin: 20px 0;
+        }
+
+    }
+}
+
+
+/* footer styling */
+footer{
+    background-color: rgba(245, 245, 245, 1);
+
+    h4{
+        font-family: var(--exo-font);
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .text{
+        padding: 50px 70px ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30.2px;
+
+        .logo{
+            p{
+                margin-top: 32px;
+                max-width: 341.69px;
+            }
+        }
+
+        .help , .programs{
+            div{
+                margin-top: 32px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                a{
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+
+                a:hover{
+                    color: var(--primary-color);
+                }
+            }
+        }
+
+        .conect{
+            .Address{
+                padding-top: 32px;
+                max-width: 340.22px;
+            }
+
+            .tel{
+                padding-top:16px ;
+            }
+
+            .Mail{
+                padding-bottom: 16px;
+            }
+
+            .apps{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                a:hover svg path{
+                    fill: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .Copyright{
+        max-width: 452px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width:992px){
+/* global styling */
+    .container{
+    padding:56px 20px 70px;
+    }
+
+    /* navbar styling */
+    header{
+        nav{
+            padding: 0 20px;
+            ul , div{
+                display: none;
+            }
+
+            .bars{
+                display: block;
+                cursor: pointer;
+            }
+
+        }
+
+        .title{
+            padding: 18px 20px;
+        }
+
+    }
+
+    /* main styling */
+
+    /* Login / Register styling   */
+    .forms{
+        
+        .login-form{
+            width: 609px;
+            height: 406px ;
+            padding: 30px 15px;
+
+        }
+
+        .Register-form{
+            width: 585px;
+            padding: 30px 15px;
+
+            h2{
+                padding-bottom: 10px;
+            }
+            
+            input{
+                width: 100%;
+                padding: 10.5px 16px;
+                margin-top: 20px;
+                border-radius: 8px;
+                border: 1px solid var(--Grey);
+                outline: none;
+            }
+
+            button{
+                width: 100%;
+                margin: 20px 0;
+            }
+
+        }
+    }
+
+    /* footer styling */
+    footer{
+
+        .text{
+            padding: 70px 20px 38px;
+            flex-direction: column;
+        }
+
+        .Copyright{
+            padding:0 20px 39px;
+            text-align: center;
+        }
+    }
+
+}
