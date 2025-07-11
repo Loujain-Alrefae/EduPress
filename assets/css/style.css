@@ -103,7 +103,7 @@ header{
                     text-decoration: none;
                 }
 
-                a:focus{
+                .link:hover{
                     background-color: var(--White_grey);
                     color: var(--primary-color);
                 }
@@ -240,6 +240,7 @@ header{
             border-radius: 20px;
             border: 1px solid  var(--Light_grey);
             transition: 0.1s all 0.2s linear;
+            cursor: pointer;
 
             h4
             {
@@ -277,6 +278,13 @@ header{
 
     .title{
         padding-top: 70px ;
+
+        button{
+            a{
+                text-decoration: none;
+                color: var(--black-color);
+            }
+        }
     }
 
     .cards{
@@ -461,7 +469,6 @@ header{
     padding:  70px 0;
     display: flex;
     justify-content: space-between;
-    /* gap: 125px; */
 
     .books{
         width: 537px;
@@ -620,6 +627,8 @@ footer{
 
 }
 
+/* for background about hero  */
+
 @media screen and (min-width:992px) and (max-width:1300px){
     header{
         .hero{
@@ -631,6 +640,8 @@ footer{
         }
     }
 }
+
+/* for mobile screen */
 
 @media screen and (max-width:992px){
 /* global styling */

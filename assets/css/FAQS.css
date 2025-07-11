@@ -85,7 +85,7 @@ header{
                     text-decoration: none;
                 }
 
-                .link:focus{
+                .link:hover{
                     color: var(--primary-color);
                     background-color: var(--White_grey);
                 }
@@ -153,7 +153,6 @@ header{
                 color: var(--black-color);
                 text-decoration: none;
             }
-                
         }
 
         .bars{
@@ -242,8 +241,6 @@ header{
             }
         }
     }
-
-    
 }
 
 
@@ -323,6 +320,7 @@ footer{
     }
 }
 
+/* for mobile screen */
 
 @media screen and (max-width:992px){
 /* global styling */
@@ -347,7 +345,6 @@ footer{
         .title{
             padding: 18px 20px;
         }
-
     }
 
 

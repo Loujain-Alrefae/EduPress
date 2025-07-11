@@ -18,7 +18,7 @@
 
 /* global style */
 .container{
-    padding: 56px 70px 70px;
+    padding:56px 70px 70px;
 }
 
 .btn{
@@ -43,13 +43,14 @@
 
 .dis-style{
     font-family: var(--jost-font);
+    color: var(--dis-color);
     font-size: var(--dis-size);
-    color: #9D9D9D;
     font-weight: 400;
 }
 
 /* header styling */
 header{
+
     nav{
         width: 100vw;
         height: 72px;
@@ -73,7 +74,7 @@ header{
             font-family: var(--exo-font);
             display: flex;
             justify-content: space-between;
-                
+            
             li{
                     
                 .link{
@@ -83,54 +84,56 @@ header{
                     text-decoration: none;
                 }
 
-                a:focus{
+                .link:hover{
                     color: var(--primary-color);
                     background-color: var(--White_grey);
                 }
             }
-                .dropdown{
-                    position: relative;
 
-                    img{
-                        position: absolute;
-                        left: 58px;
-                        width: 20px;
-                        height: 20px;
-                        vertical-align: middle;
-                    }
+            .dropdown{
+                position: relative;
 
-                    .submenu{
-                        min-width: 100%;
-                        width: 90px;
-                        position: absolute;
-                        display: none;
-                        top: 46px;
-                        background-color: white;
-                        border-radius: 8px;
+                img{
+                    position: absolute;
+                    left: 58px;
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: middle;
+                }
 
-                        li{
-                            padding: 10px 0;
-                            a{
-                                text-decoration: none;
-                                color: var(--black-color);
-                            }
-                        }
+                .submenu{
+                    min-width: 100%;
+                    width: 90px;
+                    display: none;
+                    position: absolute;
+                    top: 46px;
+                    left: 0;
+                    background-color: white;
+                    border-radius: 8px;
+                    border: 1px solid  var(--Light_grey);
 
-                        li:hover{
-                            a{
-                                color: var(--primary-color);
-                            }
+                    li{
+                        
+                        padding: 10px 0; 
+                        a{
+                            color: var(--black-color);
+                            text-decoration: none;
                         }
                     }
 
-                }
-
-                .dropdown:hover{
-                    .submenu{
-                        display: block;
+                    li:hover{
+                        a{
+                            color: var(--primary-color);
+                        }
                     }
                 }
+            }
             
+            .dropdown:hover{
+                .submenu{
+                    display: block;
+                }
+            }
 
             .hidden{
                 display: none;
@@ -149,18 +152,17 @@ header{
                 font-family: var(--jost-font);
                 color: var(--black-color);
                 text-decoration: none;
-            }
-                
+            }            
         }
 
         .bars{
             display: none;
         }
-    }
+    }   
 
     .title{
         margin-top: 72px;
-        padding: 18px 70px;
+        padding: 18px 70px ;
         display: flex;
         gap: 8px;
         background-color: var(--White_grey);
@@ -179,13 +181,11 @@ header{
     }
 }
 
-
 /* main styling */
 
-.courses{
-
-    .title-courses{
-        padding-bottom: 50px;
+.articles{
+    .title-articles{
+        padding-bottom:50px;
         display: flex;
         justify-content: space-between;
 
@@ -214,30 +214,31 @@ header{
                     display: none;
                 }
             }
-            
+
             .svg-img{
                 display: flex;
                 gap: 20px;
+                cursor: pointer;
 
                 .color path:hover{
                     fill: var(--primary-color);
                 }
-            }
+            }        
         }
     }
 
     .cards{
         display: flex;
-        flex-direction: column;
+        flex-direction:column ;
+        flex-wrap: wrap;
         gap: 35px;
 
-        .info-courses{
-            width: 100%;
-            display: flex;
-            border: 1px solid  #EAEAEA;
+        .box{
+            border: 1px solid var(--Light_grey);
             border-radius: 20px;
-            position: relative;
-            z-index: -1;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
 
             .main-img{
                 width: 410px;
@@ -245,98 +246,37 @@ header{
                 border-bottom-left-radius: 20px;
             }
 
-            .box{
-                max-width: 114px;
-                padding: 8px 12px;
-                color: white;
-                background-color: var(--black-color);
-                font-family: var(--jost-font);
-                font-weight: 500;
-                border-radius: 8px;
-                position: absolute;
-                top: 20px;
-                left: 20px;
+            .info-articale{
+                padding: 30px;
+
+                h4{
+                    font-family: var(--exo-font);
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+
+                .date{
+                    display: flex;
+                    gap: 8px;
+                    margin: 16px 0;
+
+                    .hidden{
+                        display: none;
+                    }
+
+                    .dif-size{
+                        font-size: 16px;
+                    }
+                }
             }
+        }
 
-            .text{
-                padding: 20px ;
-                width: calc(100% - 410px);
+        .box:hover{
+            background-color: var(--White_grey);
+            box-shadow: 0px 4px 20px 0px #0000001A;
 
-                .title-card{
-                    padding-top: 70x;
-
-                    p{
-                        font-family: var(--jost-font);
-                        padding-bottom: 12px;
-
-                        span{
-                            color: var(--dis-color);
-                        }
-                    }
-
-                    h4{
-                        font-family: var(--exo-font);
-                        font-weight: 600;
-                        font-size: 20px;
-                    }
-                }
-
-                .info{
-                    padding: 16px 0;
-                    margin-bottom: 67px;
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 24px;
-
-                    .dis-flex{
-                        min-width: 84px;
-                        display: flex;
-                        gap: 8px;
-                        font-family: var(--jost-font);
-                        color: var(--dis-color);
-
-                        img{
-                            width: 16px;
-                            height: 16px;
-                        }
-                    }
-                }
-
-                .line{
-                    border:1px solid  #eaeaea;
-                }
-
-                .price{
-                    padding-top: 16px;
-                    display: flex;
-                    justify-content: space-between;
-
-                    .new-price , a{
-                        font-family: var(--jost-font);
-                        font-size: var(--dis-size);
-                        font-weight: 500;
-                    }
-
-                    a{
-                        text-decoration: none;
-                        color: var(--black-color);
-                    }
-
-                    .new-price{
-                        display: flex;
-                        gap: 8px;
-
-                        p{
-                            color:  #9D9D9D;
-                            font-weight: 400;
-                        }
-
-                        .free{
-                            color: #55BE24;
-                        }
-                    }
-
-                }
+            h4{
+                color: var(--primary-color);
             }
         }
     }
@@ -390,7 +330,7 @@ footer{
     }
 
     .text{
-        padding: 50px 70px;
+        padding: 50px 70px ;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -454,6 +394,8 @@ footer{
     }
 }
 
+/* for mobile screen */
+
 @media screen and (max-width:992px){
 /* global styling */
     .container{
@@ -462,6 +404,7 @@ footer{
 
     /* header styling */
     header{
+
         nav{
             padding: 0 20px;
             ul , div{
@@ -472,19 +415,20 @@ footer{
                 display: block;
                 cursor: pointer;
             }
+
         }
 
         .title{
             padding: 18px 20px;
         }
+
     }
-    
 
     /* main styling */
     
+    .articles{
 
-    .courses{
-        .title-courses{
+        .title-articles{
             flex-direction: column;
             gap: 32px;
 
@@ -497,18 +441,15 @@ footer{
                         max-width:  239px;
                         height: 31px;
                     }
-
-                }
-                
+                }             
             }
         }
+
         .cards{
-            display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 35px;
 
-            .info-courses{
+            .box{
                 max-width: 385px;
                 display: block;
 
@@ -516,24 +457,20 @@ footer{
                     width: 100%;
                     border-top-left-radius: 20px;
                     border-top-right-radius: 20px;
+                    border-bottom-left-radius: 0;
                 }
 
-                .text{
-                    padding: 20px ;
-                    width: 100%;
-
-                    .info{
-                        margin-bottom: 0;
-
+                .info-articale{
+                    padding: 20px;
+                    
+                    .date{
                         .hidden{
-                            display: none;
+                            display: block;
                         }
                     }
-                    
                 }
             }
         }
-
     }
 
     .circle{
