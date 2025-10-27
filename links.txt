@@ -1,7 +1,0 @@
-deploy link 
-
-https://loujain-alrefae.github.io/EduPress/
-
-repo link 
-
-https://github.com/Loujain-Alrefae/EduPress
