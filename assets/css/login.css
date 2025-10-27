@@ -108,7 +108,7 @@ header nav ul .dropdown .submenu {
   border: 1px solid var(--Light_grey);
 }
 header nav ul .dropdown .submenu li {
-  padding: 10px 20px;
+  padding: 10px 4px;
 }
 header nav ul .dropdown .submenu li a {
   text-decoration: none;
